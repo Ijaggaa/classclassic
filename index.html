@@ -10,39 +10,36 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:-apple-system,BlinkMacSystemFont,Arial;
 }
 
 body{
-background:#111;
-color:white;
+background:white;
+color:#111;
 }
 
 /* HEADER */
 
 header{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:40px;
-background:black;
+text-align:center;
+padding:50px;
 }
 
-.logo img{
+header img{
 height:180px;
 }
 
 /* HERO */
 
 .hero{
-height:90vh;
-background:url("https://images.unsplash.com/photo-1603252109303-2751441dd157") center/cover;
+height:80vh;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:70px;
+font-size:60px;
+font-weight:600;
 letter-spacing:6px;
-font-weight:bold;
+animation:fadeIn 2s;
 }
 
 /* SECTION */
@@ -53,8 +50,8 @@ text-align:center;
 }
 
 .section h2{
-font-size:40px;
-margin-bottom:50px;
+font-size:36px;
+margin-bottom:70px;
 }
 
 /* PRODUCTS */
@@ -62,100 +59,119 @@ margin-bottom:50px;
 .products{
 display:flex;
 justify-content:center;
-gap:80px;
+gap:100px;
 flex-wrap:wrap;
 }
 
+/* CARD */
+
 .card{
-width:380px;
-background:#1a1a1a;
-box-shadow:0 20px 60px rgba(0,0,0,0.5);
+width:420px;
 transition:0.4s;
+animation:fadeUp 1.5s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-15px);
 }
+
+/* IMAGE BOX */
 
 .image-box{
 position:relative;
+overflow:hidden;
 }
 
 .image-box img{
 width:100%;
+transition:1s;
+}
+
+.image-box:hover img{
+transform:scale(1.1);
 }
 
 /* CHEST LOGO */
 
-.product-logo{
+.chest-logo{
 position:absolute;
-top:80px;
-left:140px;
-width:40px;
+top:110px;
+left:170px;
+width:35px;
+opacity:0.9;
 }
 
-/* SHIRT SLIDER */
+/* COLLAR LOGO */
 
-.slider img{
-display:none;
+.collar-logo{
+position:absolute;
+top:40px;
+left:200px;
+width:25px;
+opacity:0.9;
 }
 
-.slider img.active{
-display:block;
-}
+/* TEXT */
 
 .card h3{
-margin:20px;
-font-size:24px;
+margin-top:25px;
+font-size:26px;
 }
 
 .price{
-font-size:22px;
-font-weight:bold;
-margin-bottom:15px;
+font-size:14px;
+color:#666;
+margin-top:10px;
 }
 
 .desc{
-padding:0 30px;
 font-size:14px;
-line-height:1.7;
-margin-bottom:20px;
+line-height:1.6;
+margin:20px 30px;
+color:#444;
 }
+
+/* BUTTON */
 
 button{
 padding:12px 25px;
 border:none;
-background:white;
-color:black;
+background:black;
+color:white;
 cursor:pointer;
-margin-bottom:30px;
+transition:0.3s;
 }
 
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:20px;
-padding:60px 10%;
-}
-
-.gallery img{
-width:100%;
-transition:0.4s;
-}
-
-.gallery img:hover{
-transform:scale(1.1);
+button:hover{
+background:#333;
 }
 
 /* FOOTER */
 
 footer{
-text-align:center;
+margin-top:120px;
 padding:40px;
-background:black;
-margin-top:60px;
+text-align:center;
+background:#111;
+color:white;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+0%{opacity:0}
+100%{opacity:1}
+}
+
+@keyframes fadeUp{
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -166,15 +182,15 @@ margin-top:60px;
 
 <header>
 
-<div class="logo">
 <img src="logo.png">
-</div>
 
 </header>
+
 
 <div class="hero">
 CLASS CLASSIC
 </div>
+
 
 <section class="section">
 
@@ -182,67 +198,65 @@ CLASS CLASSIC
 
 <div class="products">
 
-<!-- SHIRT -->
+
+<!-- WHITE SHIRT -->
 
 <div class="card">
 
 <div class="image-box">
 
-<img class="product-logo" src="logo.png">
-
-<div class="slider" id="shirtSlider">
-
-<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c" class="active">
-<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
-<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
 <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
-<img src="https://images.unsplash.com/photo-1618354691438-25bc04584c23">
+
+<img class="chest-logo" src="logo.png">
+
+<img class="collar-logo" src="logo.png">
 
 </div>
 
-</div>
+<h3>C&C White Shirt</h3>
 
-<h3>C&C Luxury White Shirt</h3>
-
-<p class="price">₹21,999 INR</p>
+<p class="price">₹21,999</p>
 
 <p class="desc">
 
-This premium shirt is crafted from carefully cultivated cotton grown
-in specialized farms where the fibers develop exceptional softness
+This luxury white shirt is crafted from carefully cultivated cotton
+grown in specialized farms where fibers develop superior softness
 and strength. Designed with timeless elegance by C&C.
 
 </p>
 
-<button onclick="order()">Buy Now</button>
+<button>Buy Now</button>
 
 </div>
 
 
-<!-- T SHIRT -->
+<!-- POLO T SHIRT -->
 
 <div class="card">
 
 <div class="image-box">
 
-<img class="product-logo" src="logo.png">
-
 <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
+
+<img class="chest-logo" src="logo.png">
+
+<img class="collar-logo" src="logo.png">
 
 </div>
 
-<h3>C&C Premium Polo T-Shirt</h3>
+<h3>C&C Polo T-Shirt</h3>
 
-<p class="price">₹14,999 INR</p>
+<p class="price">₹14,999</p>
 
 <p class="desc">
 
-Our polo t-shirts are made from high-grade cotton cultivated in
-carefully maintained farms producing soft breathable fibers.
+Our polo t-shirts are crafted from high-grade cotton cultivated
+in carefully maintained farms producing smooth breathable fibers
+for everyday luxury comfort.
 
 </p>
 
-<button onclick="order()">Buy Now</button>
+<button>Buy Now</button>
 
 </div>
 
@@ -250,56 +264,12 @@ carefully maintained farms producing soft breathable fibers.
 
 </section>
 
-
-<section class="section">
-
-<h2>Brand Gallery</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
-<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
-<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
-
-</div>
-
-</section>
 
 <footer>
 
 © 2026 C&C Class Classic
 
 </footer>
-
-
-<script>
-
-/* SHIRT SLIDER */
-
-let i = 0;
-const slides = document.querySelectorAll("#shirtSlider img");
-
-setInterval(()=>{
-
-slides[i].classList.remove("active");
-
-i = (i+1)%slides.length;
-
-slides[i].classList.add("active");
-
-},2500);
-
-
-/* WHATSAPP ORDER */
-
-function order(){
-
-window.open("https://wa.me/919999999999?text=I want to order C&C product");
-
-}
-
-</script>
 
 </body>
 
