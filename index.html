@@ -35,22 +35,21 @@ height:200px;
 /* HERO */
 
 .hero{
-height:70vh;
+height:60vh;
 background:black;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:55px;
+font-size:50px;
 letter-spacing:5px;
-font-weight:bold;
 }
 
 /* TITLE */
 
 .section-title{
 text-align:center;
-margin:70px 0 40px;
+margin:70px 0;
 font-size:32px;
 }
 
@@ -60,8 +59,8 @@ font-size:32px;
 display:flex;
 justify-content:center;
 gap:80px;
-padding:40px;
 flex-wrap:wrap;
+padding-bottom:80px;
 }
 
 .card{
@@ -70,27 +69,46 @@ background:white;
 box-shadow:0 20px 50px rgba(0,0,0,0.1);
 text-align:center;
 padding-bottom:30px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* IMAGE CONTAINER */
+
+.image-box{
 position:relative;
+overflow:hidden;
 }
 
-.card img{
-width:100%;
-}
-
-/* LOGO ON PRODUCT */
+/* PRODUCT LOGO */
 
 .product-logo{
 position:absolute;
-top:20px;
-left:50%;
-transform:translateX(-50%);
-width:60px;
+top:80px;
+left:120px;
+width:45px;
 opacity:0.9;
 }
 
+/* SHIRT SLIDER */
+
+.slider img{
+width:100%;
+display:none;
+}
+
+.slider img.active{
+display:block;
+}
+
+/* TEXT */
+
 .card h3{
 margin:20px 0;
-font-size:26px;
+font-size:24px;
 }
 
 .price{
@@ -114,12 +132,13 @@ color:white;
 cursor:pointer;
 }
 
+/* FOOTER */
+
 footer{
 background:black;
 color:white;
 text-align:center;
 padding:40px;
-margin-top:70px;
 }
 
 </style>
@@ -144,26 +163,35 @@ CLASS CLASSIC
 
 <div class="products">
 
-
 <!-- SHIRT -->
 
 <div class="card">
 
+<div class="image-box">
+
 <img class="product-logo" src="logo.png">
 
-<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+<div class="slider" id="shirtSlider">
 
-<h3>C&C Heritage White Shirt</h3>
+<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c" class="active">
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
+<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+<img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
+
+</div>
+
+</div>
+
+<h3>C&C Luxury White Shirt</h3>
 
 <p class="price">₹21,999 INR</p>
 
 <p class="desc">
 
-This luxury white shirt is made from carefully cultivated premium
-cotton grown in specialized farms where climate and soil produce
-strong and smooth fibers. The cotton is refined and woven through
-precision textile techniques to create fabric known for elegance,
-softness and durability.
+Our premium white shirt is produced from carefully cultivated cotton
+grown in specialized farms where the fibers develop exceptional softness
+and strength. The cotton is refined and woven through advanced textile
+processes creating fabric known for elegance and durability.
 
 </p>
 
@@ -176,20 +204,24 @@ softness and durability.
 
 <div class="card">
 
+<div class="image-box">
+
 <img class="product-logo" src="logo.png">
 
-<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
+<img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
 
-<h3>C&C Signature White T-Shirt</h3>
+</div>
+
+<h3>C&C Premium Polo T-Shirt</h3>
 
 <p class="price">₹14,999 INR</p>
 
 <p class="desc">
 
-Our premium t-shirts are produced from high-grade cotton cultivated
-in carefully maintained farms where natural conditions produce
-exceptionally soft fibers. The cotton is spun and knitted through
-advanced textile processes creating breathable and luxurious fabric.
+This polo t-shirt is crafted from high-grade cotton cultivated in
+carefully maintained farms where natural conditions produce smooth
+fibers. The fabric is knitted using advanced textile techniques to
+deliver breathable comfort and luxury minimal design.
 
 </p>
 
@@ -204,6 +236,25 @@ advanced textile processes creating breathable and luxurious fabric.
 © 2026 C&C Class Classic
 
 </footer>
+
+<script>
+
+/* SHIRT IMAGE SLIDER */
+
+let index = 0;
+const slides = document.querySelectorAll("#shirtSlider img");
+
+setInterval(() => {
+
+slides[index].classList.remove("active");
+
+index = (index + 1) % slides.length;
+
+slides[index].classList.add("active");
+
+}, 2500);
+
+</script>
 
 </body>
 
