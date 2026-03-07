@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&C CLASS CLASSIC | The White Collection</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000000; /* Deep black background like your logo */
+            color: #ffffff; /* All text white, like your logo */
+            line-height: 1.6;
+        }
 
+        /* Navigation */
+        nav {
+            padding: 30px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #333333;
+            position: sticky;
+            top: 0;
+            background: rgba(0,0,0,0.8); /* Semi-transparent black */
+            z-index: 1000;
+        }
+
+        .logo-image {
+            max-height: 80px; /* Adjust height of your logo */
+            width: auto;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: #111111; /* Slightly lighter black for contrast */
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #cccccc;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+        }
+
+        /* Product Section */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .product-card {
+            text-align: center;
+            transition: transform 0.3s;
+            border: 1px solid transparent;
+            padding-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border: 1px solid #333;
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 500px; /* Adjust height to match your photo style */
+            background-color: #222222; /* Placeholder color before image loads */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .product-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover; /* Important to keep images square-ish or well-framed */
+            display: block;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .price-row {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 1.1rem;
+            color: #cccccc;
+            letter-spacing: 1px;
+        }
+
+        .details-link {
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        
+        .details-link:hover {
+            color: #aaaaaa;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #000000;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 1px solid #333333;
+            margin-top: 80px;
+            font-size: 12px;
+            color: #666666;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="logo.png" alt="C&C CLASS CLASSIC Logo" class="logo-image">
+    </nav>
+
+    <header>
+        <h1>Pure White Collection</h1>
+        <p>Pure White. Pure Class.</p>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://images.pexels.com/photos/157675/fashion-men-s-individuality-unisex-157675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="C&C Classic White Shirt" class="product-img">
+            </div>
+            <div class="product-title">Classic Cotton White Shirt</div>
+            <div class="price-row">
+                <span class="price">Timeless Elegance</span>
+            </div>
+            <a href="#" class="details-link">Details</a>
+            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Interested in Classic White Shirt" target="_blank" class="btn">Order via WhatsApp</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image-container">
+                <img src="https://images.pexels.com/photos/1684918/pexels-photo-1684918.jpeg?auto=compress&cs=tinysrgb&w=600" alt="C&C Signature White Polo" class="product-img">
+            </div>
+            <div class="product-title">Signature White Polo</div>
+            <div class="price-row">
+                <span class="price">Luxury Comfort</span>
+            </div>
+            <a href="#" class="details-link">Details</a>
+            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER?text=Interested in Signature White Polo" target="_blank" class="btn">Order via WhatsApp</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 C&C CLASS CLASSIC. ALL RIGHTS RESERVED.</p>
+        <p>PURE WHITE. PURE CLASS.</p>
+    </footer>
+
+</body>
+</html>
