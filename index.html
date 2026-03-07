@@ -14,7 +14,7 @@ font-family:-apple-system,BlinkMacSystemFont,Arial;
 }
 
 body{
-background:#ffffff;
+background:white;
 color:#111;
 }
 
@@ -23,45 +23,40 @@ color:#111;
 header{
 text-align:center;
 padding:50px;
-animation:fade 1.5s;
 }
 
 header img{
-height:150px;
+height:140px;
 }
 
 /* HERO */
 
 .hero{
-height:70vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
 text-align:center;
+padding:60px 20px;
 }
 
 .hero h1{
 font-size:60px;
-letter-spacing:5px;
+letter-spacing:6px;
 }
 
 .hero p{
-margin-top:20px;
+margin-top:15px;
 font-size:18px;
-color:#555;
+color:#666;
 }
 
 /* SECTION */
 
 .section{
-padding:100px 10%;
+padding:80px 10%;
 text-align:center;
 }
 
 .section h2{
-font-size:36px;
-margin-bottom:70px;
+font-size:34px;
+margin-bottom:60px;
 }
 
 /* PRODUCTS */
@@ -69,7 +64,7 @@ margin-bottom:70px;
 .products{
 display:flex;
 justify-content:center;
-gap:120px;
+gap:80px;
 flex-wrap:wrap;
 }
 
@@ -78,43 +73,24 @@ flex-wrap:wrap;
 .card{
 width:420px;
 transition:0.4s;
-animation:fadeUp 1s;
 }
 
 .card:hover{
-transform:translateY(-12px);
+transform:translateY(-10px);
 }
 
-/* IMAGE BOX */
+/* IMAGE */
 
-.image-box{
-position:relative;
-overflow:hidden;
-}
-
-.image-box img{
+.card img{
 width:100%;
-transition:0.8s;
-}
-
-.image-box:hover img{
-transform:scale(1.05);
-}
-
-/* CHEST LOGO */
-
-.logo-chest{
-position:absolute;
-top:120px;
-left:190px;
-width:30px;
+border-radius:6px;
 }
 
 /* TEXT */
 
 .card h3{
-margin-top:25px;
-font-size:26px;
+margin-top:20px;
+font-size:24px;
 }
 
 .price{
@@ -126,8 +102,8 @@ margin-top:6px;
 /* BUTTON */
 
 button{
-margin-top:25px;
-padding:12px 28px;
+margin-top:20px;
+padding:12px 26px;
 border:none;
 background:#111;
 color:white;
@@ -142,29 +118,11 @@ background:#333;
 /* FOOTER */
 
 footer{
-margin-top:120px;
+margin-top:100px;
 padding:40px;
-text-align:center;
 background:#111;
 color:white;
-}
-
-/* ANIMATIONS */
-
-@keyframes fade{
-0%{opacity:0}
-100%{opacity:1}
-}
-
-@keyframes fadeUp{
-0%{
-opacity:0;
-transform:translateY(30px);
-}
-100%{
-opacity:1;
-transform:translateY(0);
-}
+text-align:center;
 }
 
 </style>
@@ -196,17 +154,11 @@ transform:translateY(0);
 <div class="products">
 
 
-<!-- SHIRT -->
+<!-- WHITE SHIRT -->
 
 <div class="card">
 
-<div class="image-box">
-
 <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
-
-<img class="logo-chest" src="logo.png">
-
-</div>
 
 <h3>C&C White Shirt</h3>
 
@@ -218,17 +170,11 @@ transform:translateY(0);
 
 
 
-<!-- POLO -->
+<!-- POLO TSHIRT -->
 
 <div class="card">
 
-<div class="image-box">
-
-<img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
-
-<img class="logo-chest" src="logo.png">
-
-</div>
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
 
 <h3>C&C White Polo T-Shirt</h3>
 
@@ -255,7 +201,7 @@ transform:translateY(0);
 
 function order(){
 
-window.open("https://wa.me/919813070099?text=Hello I want to order C&C white clothing");
+window.open("https://wa.me/919813070099?text=I want to order C&C White Clothing");
 
 }
 
