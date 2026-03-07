@@ -35,14 +35,15 @@ height:200px;
 /* HERO */
 
 .hero{
-height:60vh;
-background:black;
+height:70vh;
+background:url("https://images.unsplash.com/photo-1603252109303-2751441dd157") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-font-size:50px;
-letter-spacing:5px;
+font-size:55px;
+letter-spacing:6px;
+font-weight:bold;
 }
 
 /* TITLE */
@@ -50,7 +51,7 @@ letter-spacing:5px;
 .section-title{
 text-align:center;
 margin:70px 0;
-font-size:32px;
+font-size:34px;
 }
 
 /* PRODUCTS */
@@ -64,39 +65,42 @@ padding-bottom:80px;
 }
 
 .card{
-width:360px;
+width:380px;
 background:white;
-box-shadow:0 20px 50px rgba(0,0,0,0.1);
+box-shadow:0 20px 60px rgba(0,0,0,0.1);
 text-align:center;
 padding-bottom:30px;
-transition:0.3s;
+transition:0.4s;
 }
 
 .card:hover{
 transform:translateY(-10px);
 }
 
-/* IMAGE CONTAINER */
+/* IMAGE BOX */
 
 .image-box{
 position:relative;
 overflow:hidden;
 }
 
-/* PRODUCT LOGO */
+.image-box img{
+width:100%;
+}
+
+/* CHEST LOGO */
 
 .product-logo{
 position:absolute;
-top:80px;
-left:120px;
-width:45px;
+top:85px;
+left:135px;
+width:40px;
 opacity:0.9;
 }
 
 /* SHIRT SLIDER */
 
 .slider img{
-width:100%;
 display:none;
 }
 
@@ -163,6 +167,7 @@ CLASS CLASSIC
 
 <div class="products">
 
+
 <!-- SHIRT -->
 
 <div class="card">
@@ -177,6 +182,7 @@ CLASS CLASSIC
 <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
 <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
 <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
+<img src="https://images.unsplash.com/photo-1618354691438-25bc04584c23">
 
 </div>
 
@@ -188,14 +194,14 @@ CLASS CLASSIC
 
 <p class="desc">
 
-Our premium white shirt is produced from carefully cultivated cotton
-grown in specialized farms where the fibers develop exceptional softness
-and strength. The cotton is refined and woven through advanced textile
-processes creating fabric known for elegance and durability.
+This luxury shirt is produced from carefully cultivated cotton grown
+in specialized farms where the fibers develop superior softness and
+strength. The cotton is refined through advanced weaving techniques
+creating fabric known for elegance, durability and comfort.
 
 </p>
 
-<button>Buy Now</button>
+<button onclick="order()">Buy Now</button>
 
 </div>
 
@@ -218,14 +224,14 @@ processes creating fabric known for elegance and durability.
 
 <p class="desc">
 
-This polo t-shirt is crafted from high-grade cotton cultivated in
-carefully maintained farms where natural conditions produce smooth
-fibers. The fabric is knitted using advanced textile techniques to
-deliver breathable comfort and luxury minimal design.
+Our premium polo t-shirts are crafted from high-grade cotton cultivated
+in carefully maintained farms where climate and soil produce naturally
+smooth fibers. The cotton is knitted through advanced textile processes
+to deliver breathable luxury comfort.
 
 </p>
 
-<button>Buy Now</button>
+<button onclick="order()">Buy Now</button>
 
 </div>
 
@@ -237,22 +243,32 @@ deliver breathable comfort and luxury minimal design.
 
 </footer>
 
+
 <script>
 
-/* SHIRT IMAGE SLIDER */
+/* SHIRT SLIDER */
 
-let index = 0;
+let i = 0;
 const slides = document.querySelectorAll("#shirtSlider img");
 
 setInterval(() => {
 
-slides[index].classList.remove("active");
+slides[i].classList.remove("active");
 
-index = (index + 1) % slides.length;
+i = (i + 1) % slides.length;
 
-slides[index].classList.add("active");
+slides[i].classList.add("active");
 
 }, 2500);
+
+
+/* WHATSAPP ORDER */
+
+function order(){
+
+window.open("https://wa.me/919999999999?text=I want to order C&C product");
+
+}
 
 </script>
 
