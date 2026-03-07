@@ -1,180 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C&C CLASS CLASSIC | Pure White</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            overflow-x: hidden;
-        }
+<title>C&C | Class Classic</title>
 
-        /* Apple Style Glassmorphism Nav */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            height: 60px;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(15px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 0.5px solid #333;
-        }
+<style>
 
-        .logo-img { height: 40px; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,Arial;
+}
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+body{
+background:white;
+color:#111;
+}
 
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 600;
-            letter-spacing: -2px;
-            background: linear-gradient(180deg, #fff 0%, #888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+/* HEADER */
 
-        .hero p {
-            font-size: 1.5rem;
-            color: #86868b;
-            margin-top: 10px;
-        }
+header{
+text-align:center;
+padding:40px;
+}
 
-        /* Product Section */
-        .product-section {
-            padding: 100px 5%;
-            display: flex;
-            flex-direction: column;
-            gap: 150px;
-        }
+header img{
+height:140px;
+}
 
-        .product-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+/* HERO */
 
-        .product-row.reverse { flex-direction: row-reverse; }
+.hero{
+text-align:center;
+padding:70px 20px;
+}
 
-        .product-info {
-            max-width: 400px;
-            padding: 20px;
-        }
+.hero h1{
+font-size:60px;
+letter-spacing:6px;
+}
 
-        .product-info h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#666;
+}
 
-        .product-info p {
-            color: #86868b;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
+/* SECTION */
 
-        .image-container {
-            flex: 1;
-            max-width: 600px;
-            text-align: center;
-        }
+.section{
+padding:80px 10%;
+text-align:center;
+}
 
-        /* Image Zoom Animation on Hover */
-        .product-img {
-            width: 80%;
-            border-radius: 20px;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+.section h2{
+font-size:34px;
+margin-bottom:60px;
+}
 
-        .product-img:hover {
-            transform: scale(1.05);
-        }
+/* PRODUCTS */
 
-        /* Buy Button - Apple Style */
-        .cta-btn {
-            background: #0071e3;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 980px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 17px;
-            transition: 0.3s;
-        }
+.products{
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
+}
 
-        .cta-btn:hover { background: #0077ed; opacity: 0.9; }
+/* CARD */
 
-        footer {
-            padding: 100px 20px;
-            text-align: center;
-            color: #424245;
-            font-size: 12px;
-            border-top: 0.5px solid #333;
-        }
-    </style>
+.card{
+width:420px;
+}
+
+/* SLIDER */
+
+.slider{
+position:relative;
+}
+
+.slider img{
+width:100%;
+display:none;
+border-radius:8px;
+}
+
+.slider img.active{
+display:block;
+}
+
+/* TEXT */
+
+.card h3{
+margin-top:20px;
+font-size:24px;
+}
+
+.price{
+font-size:14px;
+color:#777;
+margin-top:6px;
+}
+
+/* BUTTON */
+
+button{
+margin-top:20px;
+padding:12px 26px;
+border:none;
+background:#111;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#333;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:100px;
+padding:40px;
+background:#111;
+color:white;
+text-align:center;
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <nav>
-        <img src="logo.png" alt="C&C" class="logo-img">
-    </nav>
+<header>
 
-    <section class="hero" data-aos="fade-up" data-aos-duration="1500">
-        <h1>Pure White.</h1>
-        <p>Pure Class.</p>
-    </section>
+<img src="logo.png">
 
-    <div class="product-section">
-        <div class="product-row">
-            <div class="image-container" data-aos="fade-right" data-aos-duration="1200">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000" class="product-img" alt="Premium White Shirt">
-            </div>
-            <div class="product-info" data-aos="fade-left" data-aos-duration="1200">
-                <h2>The Classic Shirt.</h2>
-                <p>Meticulously crafted with premium cotton for a sharp, tailored look that never fades.</p>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Order: Classic White Shirt" class="cta-btn">Buy Now</a>
-            </div>
-        </div>
+</header>
 
-        <div class="product-row reverse">
-            <div class="image-container" data-aos="fade-left" data-aos-duration="1200">
-                <img src="https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?q=80&w=1000" class="product-img" alt="White Polo T-shirt">
-            </div>
-            <div class="product-info" data-aos="fade-right" data-aos-duration="1200">
-                <h2>The Signature Polo.</h2>
-                <p>The perfect balance between casual comfort and sophisticated style.</p>
-                <a href="https://wa.me/91XXXXXXXXXX?text=Order: Signature White Polo" class="cta-btn">Buy Now</a>
-            </div>
-        </div>
-    </div>
+<div class="hero">
 
-    <footer>
-        &copy; 2026 C&C CLASS CLASSIC | ROHTAK, HARYANA
-    </footer>
+<h1>CLASS CLASSIC</h1>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: false, // Scroll up-down karne pe animation baar baar hogi
-            mirror: true
-        });
-    </script>
+<p>PURE WHITE TRUE LUXURY</p>
+
+</div>
+
+<section class="section">
+
+<h2>Luxury White Collection</h2>
+
+<div class="products">
+
+<!-- WHITE SHIRT -->
+
+<div class="card">
+
+<div class="slider" id="shirt">
+
+<img src="https://images.unsplash.com/photo-1603252109303-2751441dd157" class="active">
+<img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
+<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c">
+
+</div>
+
+<h3>C&C White Shirt</h3>
+
+<p class="price">₹21,999</p>
+
+<button onclick="order()">Buy Now</button>
+
+</div>
+
+
+
+<!-- WHITE POLO -->
+
+<div class="card">
+
+<div class="slider" id="polo">
+
+<img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34" class="active">
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
+<img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
+<img src="https://images.unsplash.com/photo-1574180566232-aaad1b5b8450">
+
+</div>
+
+<h3>C&C White Polo T-Shirt</h3>
+
+<p class="price">₹14,999</p>
+
+<button onclick="order()">Buy Now</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 C&C Class Classic
+
+</footer>
+
+<script>
+
+/* SHIRT SLIDER */
+
+let shirt = document.querySelectorAll("#shirt img");
+let s = 0;
+
+setInterval(()=>{
+
+shirt[s].classList.remove("active");
+
+s = (s + 1) % shirt.length;
+
+shirt[s].classList.add("active");
+
+},2500);
+
+
+/* POLO SLIDER */
+
+let polo = document.querySelectorAll("#polo img");
+let p = 0;
+
+setInterval(()=>{
+
+polo[p].classList.remove("active");
+
+p = (p + 1) % polo.length;
+
+polo[p].classList.add("active");
+
+},2500);
+
+
+/* WHATSAPP */
+
+function order(){
+
+window.open("https://wa.me/919813070099?text=I want to order C&C White Clothing");
+
+}
+
+</script>
+
 </body>
+
 </html>
