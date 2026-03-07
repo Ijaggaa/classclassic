@@ -1,67 +1,153 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>C&C | Class Classic</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Arial}
 
-body{background:#fff;color:#111}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:-apple-system,BlinkMacSystemFont,Arial;
+}
+
+body{
+background:white;
+color:#111;
+}
 
 /* HEADER */
-header{text-align:center;padding:50px}
-header img{height:140px}
+
+header{
+text-align:center;
+padding:40px;
+}
+
+header img{
+height:140px;
+}
 
 /* HERO */
-.hero{text-align:center;padding:60px 20px}
-.hero h1{font-size:60px;letter-spacing:6px}
-.hero p{margin-top:15px;font-size:18px;color:#666}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:60px;
+letter-spacing:6px;
+}
+
+.hero p{
+font-size:18px;
+margin-top:15px;
+color:#666;
+}
 
 /* SECTION */
-.section{padding:80px 10%;text-align:center}
-.section h2{font-size:34px;margin-bottom:60px}
+
+.section{
+padding:80px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:60px;
+}
 
 /* PRODUCTS */
-.products{display:flex;justify-content:center;gap:80px;flex-wrap:wrap}
+
+.products{
+display:flex;
+justify-content:center;
+gap:80px;
+flex-wrap:wrap;
+}
 
 /* CARD */
-.card{width:420px;transition:.4s}
-.card:hover{transform:translateY(-10px)}
 
-.card img{width:100%;border-radius:6px}
+.card{
+width:420px;
+}
+
+.slider{
+position:relative;
+overflow:hidden;
+border-radius:8px;
+}
+
+.slider img{
+width:100%;
+display:none;
+}
+
+.slider img.active{
+display:block;
+}
 
 /* TEXT */
-.card h3{margin-top:20px;font-size:24px}
-.price{font-size:14px;color:#777;margin-top:6px}
+
+.card h3{
+margin-top:20px;
+font-size:24px;
+}
+
+.price{
+font-size:14px;
+color:#777;
+margin-top:6px;
+}
 
 /* BUTTON */
+
 button{
 margin-top:20px;
 padding:12px 26px;
 border:none;
 background:#111;
-color:#fff;
+color:white;
 cursor:pointer;
-transition:.3s
+transition:0.3s;
 }
-button:hover{background:#333}
+
+button:hover{
+background:#333;
+}
 
 /* FOOTER */
-footer{margin-top:100px;padding:40px;background:#111;color:#fff;text-align:center}
+
+footer{
+margin-top:100px;
+padding:40px;
+background:#111;
+color:white;
+text-align:center;
+}
 
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <img src="logo.png">
+
 </header>
 
 <div class="hero">
+
 <h1>CLASS CLASSIC</h1>
+
 <p>PURE WHITE TRUE LUXURY</p>
+
 </div>
+
 
 <section class="section">
 
@@ -69,34 +155,111 @@ footer{margin-top:100px;padding:40px;background:#111;color:#fff;text-align:cente
 
 <div class="products">
 
+
 <!-- WHITE SHIRT -->
+
 <div class="card">
+
+<div class="slider" id="shirt">
+
+<img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93" class="active">
 <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157">
+<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+<img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c">
+<img src="https://images.unsplash.com/photo-1604695573706-53170668f6a6">
+
+</div>
+
 <h3>C&C White Shirt</h3>
+
 <p class="price">₹21,999</p>
+
 <button onclick="order()">Buy Now</button>
+
 </div>
 
-<!-- WHITE POLO -->
+
+
+<!-- POLO -->
+
 <div class="card">
+
+<div class="slider" id="polo">
+
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475" class="active">
 <img src="https://images.unsplash.com/photo-1622445275463-afa2ab738c34">
-<h3>C&C White Polo T-Shirt</h3>
-<p class="price">₹14,999</p>
-<button onclick="order()">Buy Now</button>
-</div>
+<img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990">
+<img src="https://images.unsplash.com/photo-1574180566232-aaad1b5b8450">
+<img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77">
 
 </div>
+
+<h3>C&C White Polo T-Shirt</h3>
+
+<p class="price">₹14,999</p>
+
+<button onclick="order()">Buy Now</button>
+
+</div>
+
+
+</div>
+
 </section>
 
+
 <footer>
+
 © 2026 C&C Class Classic
+
 </footer>
 
+
 <script>
+
+/* SHIRT SLIDER */
+
+let shirt = document.querySelectorAll("#shirt img");
+let s = 0;
+
+setInterval(()=>{
+
+shirt[s].classList.remove("active");
+
+s = (s + 1) % shirt.length;
+
+shirt[s].classList.add("active");
+
+},2500);
+
+
+/* POLO SLIDER */
+
+let polo = document.querySelectorAll("#polo img");
+let p = 0;
+
+setInterval(()=>{
+
+polo[p].classList.remove("active");
+
+p = (p + 1) % polo.length;
+
+polo[p].classList.add("active");
+
+},2500);
+
+
+/* WHATSAPP */
+
 function order(){
+
 window.open("https://wa.me/919813070099?text=I want to order C&C White Clothing");
+
 }
+
 </script>
 
+
 </body>
+
 </html>
