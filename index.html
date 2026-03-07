@@ -14,7 +14,8 @@ font-family:Arial;
 }
 
 body{
-background:#fafafa;
+background:#111;
+color:white;
 }
 
 /* HEADER */
@@ -23,35 +24,37 @@ header{
 display:flex;
 justify-content:center;
 align-items:center;
-padding:40px 0;
-background:white;
-border-bottom:1px solid #eee;
+padding:40px;
+background:black;
 }
 
 .logo img{
-height:200px;
+height:180px;
 }
 
 /* HERO */
 
 .hero{
-height:70vh;
+height:90vh;
 background:url("https://images.unsplash.com/photo-1603252109303-2751441dd157") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
-color:white;
-font-size:55px;
+font-size:70px;
 letter-spacing:6px;
 font-weight:bold;
 }
 
-/* TITLE */
+/* SECTION */
 
-.section-title{
+.section{
+padding:100px 10%;
 text-align:center;
-margin:70px 0;
-font-size:34px;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:50px;
 }
 
 /* PRODUCTS */
@@ -61,15 +64,12 @@ display:flex;
 justify-content:center;
 gap:80px;
 flex-wrap:wrap;
-padding-bottom:80px;
 }
 
 .card{
 width:380px;
-background:white;
-box-shadow:0 20px 60px rgba(0,0,0,0.1);
-text-align:center;
-padding-bottom:30px;
+background:#1a1a1a;
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
 transition:0.4s;
 }
 
@@ -77,11 +77,8 @@ transition:0.4s;
 transform:translateY(-10px);
 }
 
-/* IMAGE BOX */
-
 .image-box{
 position:relative;
-overflow:hidden;
 }
 
 .image-box img{
@@ -92,10 +89,9 @@ width:100%;
 
 .product-logo{
 position:absolute;
-top:85px;
-left:135px;
+top:80px;
+left:140px;
 width:40px;
-opacity:0.9;
 }
 
 /* SHIRT SLIDER */
@@ -108,10 +104,8 @@ display:none;
 display:block;
 }
 
-/* TEXT */
-
 .card h3{
-margin:20px 0;
+margin:20px;
 font-size:24px;
 }
 
@@ -131,18 +125,37 @@ margin-bottom:20px;
 button{
 padding:12px 25px;
 border:none;
-background:black;
-color:white;
+background:white;
+color:black;
 cursor:pointer;
+margin-bottom:30px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:60px 10%;
+}
+
+.gallery img{
+width:100%;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.1);
 }
 
 /* FOOTER */
 
 footer{
-background:black;
-color:white;
 text-align:center;
 padding:40px;
+background:black;
+margin-top:60px;
 }
 
 </style>
@@ -163,10 +176,11 @@ padding:40px;
 CLASS CLASSIC
 </div>
 
-<h2 class="section-title">Luxury Collection</h2>
+<section class="section">
+
+<h2>Luxury Collection</h2>
 
 <div class="products">
-
 
 <!-- SHIRT -->
 
@@ -194,10 +208,9 @@ CLASS CLASSIC
 
 <p class="desc">
 
-This luxury shirt is produced from carefully cultivated cotton grown
-in specialized farms where the fibers develop superior softness and
-strength. The cotton is refined through advanced weaving techniques
-creating fabric known for elegance, durability and comfort.
+This premium shirt is crafted from carefully cultivated cotton grown
+in specialized farms where the fibers develop exceptional softness
+and strength. Designed with timeless elegance by C&C.
 
 </p>
 
@@ -224,10 +237,8 @@ creating fabric known for elegance, durability and comfort.
 
 <p class="desc">
 
-Our premium polo t-shirts are crafted from high-grade cotton cultivated
-in carefully maintained farms where climate and soil produce naturally
-smooth fibers. The cotton is knitted through advanced textile processes
-to deliver breathable luxury comfort.
+Our polo t-shirts are made from high-grade cotton cultivated in
+carefully maintained farms producing soft breathable fibers.
 
 </p>
 
@@ -236,6 +247,24 @@ to deliver breathable luxury comfort.
 </div>
 
 </div>
+
+</section>
+
+
+<section class="section">
+
+<h2>Brand Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
+<img src="https://images.unsplash.com/photo-1516826957135-700dedea698c">
+<img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+
+</div>
+
+</section>
 
 <footer>
 
@@ -251,15 +280,15 @@ to deliver breathable luxury comfort.
 let i = 0;
 const slides = document.querySelectorAll("#shirtSlider img");
 
-setInterval(() => {
+setInterval(()=>{
 
 slides[i].classList.remove("active");
 
-i = (i + 1) % slides.length;
+i = (i+1)%slides.length;
 
 slides[i].classList.add("active");
 
-}, 2500);
+},2500);
 
 
 /* WHATSAPP ORDER */
