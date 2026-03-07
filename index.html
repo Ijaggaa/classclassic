@@ -23,10 +23,11 @@ color:#111;
 header{
 text-align:center;
 padding:50px;
+animation:fade 2s;
 }
 
 header img{
-height:180px;
+height:170px;
 }
 
 /* HERO */
@@ -34,12 +35,21 @@ height:180px;
 .hero{
 height:80vh;
 display:flex;
+flex-direction:column;
 align-items:center;
 justify-content:center;
-font-size:60px;
-font-weight:600;
+text-align:center;
+}
+
+.hero h1{
+font-size:70px;
 letter-spacing:6px;
-animation:fadeIn 2s;
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+color:#555;
 }
 
 /* SECTION */
@@ -50,7 +60,7 @@ text-align:center;
 }
 
 .section h2{
-font-size:36px;
+font-size:38px;
 margin-bottom:70px;
 }
 
@@ -59,7 +69,7 @@ margin-bottom:70px;
 .products{
 display:flex;
 justify-content:center;
-gap:100px;
+gap:120px;
 flex-wrap:wrap;
 }
 
@@ -72,7 +82,7 @@ animation:fadeUp 1.5s;
 }
 
 .card:hover{
-transform:translateY(-15px);
+transform:translateY(-12px);
 }
 
 /* IMAGE BOX */
@@ -88,17 +98,16 @@ transition:1s;
 }
 
 .image-box:hover img{
-transform:scale(1.1);
+transform:scale(1.05);
 }
 
 /* CHEST LOGO */
 
 .chest-logo{
 position:absolute;
-top:110px;
-left:170px;
+top:120px;
+left:190px;
 width:35px;
-opacity:0.9;
 }
 
 /* COLLAR LOGO */
@@ -106,35 +115,28 @@ opacity:0.9;
 .collar-logo{
 position:absolute;
 top:40px;
-left:200px;
-width:25px;
-opacity:0.9;
+left:210px;
+width:22px;
 }
 
 /* TEXT */
 
 .card h3{
 margin-top:25px;
-font-size:26px;
+font-size:28px;
 }
 
 .price{
 font-size:14px;
-color:#666;
-margin-top:10px;
-}
-
-.desc{
-font-size:14px;
-line-height:1.6;
-margin:20px 30px;
-color:#444;
+color:#777;
+margin-top:8px;
 }
 
 /* BUTTON */
 
 button{
-padding:12px 25px;
+margin-top:25px;
+padding:12px 28px;
 border:none;
 background:black;
 color:white;
@@ -158,7 +160,7 @@ color:white;
 
 /* ANIMATIONS */
 
-@keyframes fadeIn{
+@keyframes fade{
 0%{opacity:0}
 100%{opacity:1}
 }
@@ -186,20 +188,22 @@ transform:translateY(0);
 
 </header>
 
-
 <div class="hero">
-CLASS CLASSIC
-</div>
 
+<h1>CLASS CLASSIC</h1>
+
+<p>White clothes mean that you are the color</p>
+
+</div>
 
 <section class="section">
 
-<h2>Luxury Collection</h2>
+<h2>Luxury White Collection</h2>
 
 <div class="products">
 
 
-<!-- WHITE SHIRT -->
+<!-- SHIRT -->
 
 <div class="card">
 
@@ -217,20 +221,12 @@ CLASS CLASSIC
 
 <p class="price">₹21,999</p>
 
-<p class="desc">
-
-This luxury white shirt is crafted from carefully cultivated cotton
-grown in specialized farms where fibers develop superior softness
-and strength. Designed with timeless elegance by C&C.
-
-</p>
-
-<button>Buy Now</button>
+<button onclick="order()">Buy Now</button>
 
 </div>
 
 
-<!-- POLO T SHIRT -->
+<!-- POLO TSHIRT -->
 
 <div class="card">
 
@@ -248,15 +244,7 @@ and strength. Designed with timeless elegance by C&C.
 
 <p class="price">₹14,999</p>
 
-<p class="desc">
-
-Our polo t-shirts are crafted from high-grade cotton cultivated
-in carefully maintained farms producing smooth breathable fibers
-for everyday luxury comfort.
-
-</p>
-
-<button>Buy Now</button>
+<button onclick="order()">Buy Now</button>
 
 </div>
 
@@ -264,12 +252,22 @@ for everyday luxury comfort.
 
 </section>
 
-
 <footer>
 
 © 2026 C&C Class Classic
 
 </footer>
+
+
+<script>
+
+function order(){
+
+window.open("https://wa.me/919813070099?text=Hello I want to order C&C white clothing");
+
+}
+
+</script>
 
 </body>
 
