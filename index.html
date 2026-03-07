@@ -28,8 +28,6 @@ background:white;
 border-bottom:1px solid #eee;
 }
 
-/* BIG LOGO */
-
 .logo img{
 height:200px;
 }
@@ -37,8 +35,8 @@ height:200px;
 /* HERO */
 
 .hero{
-height:75vh;
-background:url("https://images.unsplash.com/photo-1603252109303-2751441dd157") center/cover;
+height:70vh;
+background:black;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -48,7 +46,7 @@ letter-spacing:5px;
 font-weight:bold;
 }
 
-/* SECTION TITLE */
+/* TITLE */
 
 .section-title{
 text-align:center;
@@ -72,10 +70,22 @@ background:white;
 box-shadow:0 20px 50px rgba(0,0,0,0.1);
 text-align:center;
 padding-bottom:30px;
+position:relative;
 }
 
 .card img{
 width:100%;
+}
+
+/* LOGO ON PRODUCT */
+
+.product-logo{
+position:absolute;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+width:60px;
+opacity:0.9;
 }
 
 .card h3{
@@ -102,10 +112,7 @@ border:none;
 background:black;
 color:white;
 cursor:pointer;
-font-size:14px;
 }
-
-/* FOOTER */
 
 footer{
 background:black;
@@ -142,22 +149,21 @@ CLASS CLASSIC
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
+<img class="product-logo" src="logo.png">
 
-<h3>C&C Heritage Cotton Shirt</h3>
+<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
+
+<h3>C&C Heritage White Shirt</h3>
 
 <p class="price">₹21,999 INR</p>
 
 <p class="desc">
 
-This luxury shirt is crafted from carefully selected cotton grown in
-specialized farms where the fibers develop exceptional softness and
-strength. After harvesting, the cotton is refined and woven through
-precision textile processes that ensure superior texture and durability.
-
-Each piece is then tailored with meticulous attention to detail,
-creating a garment that represents the timeless elegance of
-C&C – Class Classic.
+This luxury white shirt is made from carefully cultivated premium
+cotton grown in specialized farms where climate and soil produce
+strong and smooth fibers. The cotton is refined and woven through
+precision textile techniques to create fabric known for elegance,
+softness and durability.
 
 </p>
 
@@ -170,21 +176,20 @@ C&C – Class Classic.
 
 <div class="card">
 
+<img class="product-logo" src="logo.png">
+
 <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
 
-<h3>C&C Signature Premium T-Shirt</h3>
+<h3>C&C Signature White T-Shirt</h3>
 
 <p class="price">₹14,999 INR</p>
 
 <p class="desc">
 
-Our premium t-shirts are produced from high-grade cotton cultivated in
-carefully managed farms where climate and soil conditions create
-naturally smooth fibers.
-
-The cotton undergoes advanced spinning techniques to produce a fabric
-that is breathable, soft and luxurious while maintaining a refined
-minimal design philosophy.
+Our premium t-shirts are produced from high-grade cotton cultivated
+in carefully maintained farms where natural conditions produce
+exceptionally soft fibers. The cotton is spun and knitted through
+advanced textile processes creating breathable and luxurious fabric.
 
 </p>
 
