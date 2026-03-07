@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -14,58 +13,62 @@ box-sizing:border-box;
 font-family:Arial;
 }
 
+body{
+background:#fafafa;
+}
+
+/* HEADER */
+
 header{
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
-padding:20px 60px;
+padding:40px 0;
 background:white;
 border-bottom:1px solid #eee;
 }
 
 .logo img{
-height:45px;
+height:130px;
 }
 
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:black;
-font-size:15px;
-}
+/* HERO */
 
 .hero{
-height:85vh;
-background:url("https://images.unsplash.com/photo-1603252109303-2751441dd157") center/cover;
+height:70vh;
+background:#111;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
 font-size:55px;
-font-weight:bold;
 letter-spacing:4px;
 }
+
+/* SECTION */
 
 .section-title{
 text-align:center;
 margin:60px 0 30px;
-font-size:30px;
+font-size:32px;
 }
+
+/* PRODUCTS */
 
 .products{
 display:flex;
 justify-content:center;
-gap:40px;
+gap:80px;
 padding:40px;
 flex-wrap:wrap;
 }
 
 .card{
-width:260px;
+width:340px;
 background:white;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
 text-align:center;
-padding-bottom:20px;
+padding-bottom:25px;
 }
 
 .card img{
@@ -74,37 +77,42 @@ width:100%;
 
 .card h3{
 margin:15px 0;
+font-size:24px;
 }
 
 .price{
 font-weight:bold;
-margin-bottom:10px;
+font-size:22px;
+margin-bottom:15px;
+}
+
+.desc{
+padding:0 25px;
+font-size:14px;
+line-height:1.7;
+margin-bottom:20px;
 }
 
 button{
-padding:10px 20px;
+padding:12px 25px;
 border:none;
 background:black;
 color:white;
 cursor:pointer;
 }
 
-.about{
-text-align:center;
-padding:80px 20%;
-line-height:1.6;
-background:#f8f8f8;
-}
+/* FOOTER */
 
 footer{
 background:black;
 color:white;
 text-align:center;
-padding:30px;
-margin-top:50px;
+padding:35px;
+margin-top:60px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -115,82 +123,69 @@ margin-top:50px;
 <img src="logo.png">
 </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Shirts</a>
-<a href="#">T-Shirts</a>
-<a href="#">About</a>
-</nav>
-
 </header>
 
 <div class="hero">
 CLASS CLASSIC
 </div>
 
-<h2 class="section-title">Luxury White Shirts</h2>
+<h2 class="section-title">Luxury Collection</h2>
 
 <div class="products">
 
+
+<!-- SHIRT -->
+
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
-<h3>C&C Classic White</h3>
-<p class="price">₹1999</p>
-<button>Buy Now</button>
-</div>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1602810319428-019690571b5b">
-<h3>C&C Royal Cotton</h3>
-<p class="price">₹2499</p>
-<button>Buy Now</button>
-</div>
+<h3>C&C Heritage Cotton Shirt</h3>
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
-<h3>C&C Premium Linen</h3>
-<p class="price">₹2999</p>
-<button>Buy Now</button>
-</div>
+<p class="price">₹21,999</p>
 
-</div>
+<p class="desc">
 
-<h2 class="section-title">C&C T-Shirts</h2>
+This luxury shirt is crafted from carefully selected cotton grown in
+specialized farms where the fibers develop superior softness and
+strength. The cotton is harvested and refined through a meticulous
+process that ensures exceptional texture and durability.
 
-<div class="products">
+Each shirt is then tailored with precision and designed to reflect
+the timeless elegance of C&C – Class Classic.
 
-<div class="card">
-<img src="https://images.unsplash.com/photo-1520975922203-bf4f2d1c0c6d">
-<h3>C&C Minimal Tee</h3>
-<p class="price">₹999</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb">
-<h3>C&C Street Tee</h3>
-<p class="price">₹1199</p>
-<button>Buy Now</button>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
-<h3>C&C Premium Tee</h3>
-<p class="price">₹1399</p>
-<button>Buy Now</button>
-</div>
-
-</div>
-
-<div class="about">
-
-<h2>About C&C</h2>
-
-<p>
-C&C – Class Classic is a luxury fashion label focused on premium
-white shirts and minimal designer t-shirts. Our goal is to create
-timeless clothing with elegance and simplicity.
 </p>
+
+<button>Buy Now</button>
+
+</div>
+
+
+<!-- T SHIRT -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475">
+
+<h3>C&C Signature Premium T-Shirt</h3>
+
+<p class="price">₹14,999</p>
+
+<p class="desc">
+
+Our premium t-shirts are made from high-grade cotton cultivated in
+carefully maintained farms where climate and soil produce naturally
+smooth fibers.
+
+After harvesting, the cotton undergoes advanced spinning techniques
+to create a breathable and luxurious fabric that delivers comfort
+and refined style.
+
+</p>
+
+<button>Buy Now</button>
+
+</div>
 
 </div>
 
