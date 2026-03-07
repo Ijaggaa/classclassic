@@ -14,7 +14,7 @@ font-family:-apple-system,BlinkMacSystemFont,Arial;
 }
 
 body{
-background:white;
+background:#ffffff;
 color:#111;
 }
 
@@ -23,17 +23,17 @@ color:#111;
 header{
 text-align:center;
 padding:50px;
-animation:fade 2s;
+animation:fade 1.5s;
 }
 
 header img{
-height:170px;
+height:150px;
 }
 
 /* HERO */
 
 .hero{
-height:80vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -42,8 +42,8 @@ text-align:center;
 }
 
 .hero h1{
-font-size:70px;
-letter-spacing:6px;
+font-size:60px;
+letter-spacing:5px;
 }
 
 .hero p{
@@ -60,7 +60,7 @@ text-align:center;
 }
 
 .section h2{
-font-size:38px;
+font-size:36px;
 margin-bottom:70px;
 }
 
@@ -78,7 +78,7 @@ flex-wrap:wrap;
 .card{
 width:420px;
 transition:0.4s;
-animation:fadeUp 1.5s;
+animation:fadeUp 1s;
 }
 
 .card:hover{
@@ -94,7 +94,7 @@ overflow:hidden;
 
 .image-box img{
 width:100%;
-transition:1s;
+transition:0.8s;
 }
 
 .image-box:hover img{
@@ -103,33 +103,24 @@ transform:scale(1.05);
 
 /* CHEST LOGO */
 
-.chest-logo{
+.logo-chest{
 position:absolute;
 top:120px;
 left:190px;
-width:35px;
-}
-
-/* COLLAR LOGO */
-
-.collar-logo{
-position:absolute;
-top:40px;
-left:210px;
-width:22px;
+width:30px;
 }
 
 /* TEXT */
 
 .card h3{
 margin-top:25px;
-font-size:28px;
+font-size:26px;
 }
 
 .price{
 font-size:14px;
 color:#777;
-margin-top:8px;
+margin-top:6px;
 }
 
 /* BUTTON */
@@ -138,7 +129,7 @@ button{
 margin-top:25px;
 padding:12px 28px;
 border:none;
-background:black;
+background:#111;
 color:white;
 cursor:pointer;
 transition:0.3s;
@@ -168,7 +159,7 @@ color:white;
 @keyframes fadeUp{
 0%{
 opacity:0;
-transform:translateY(40px);
+transform:translateY(30px);
 }
 100%{
 opacity:1;
@@ -188,13 +179,15 @@ transform:translateY(0);
 
 </header>
 
+
 <div class="hero">
 
 <h1>CLASS CLASSIC</h1>
 
-<p>White clothes mean that you are the color</p>
+<p>PURE WHITE TRUE LUXURY</p>
 
 </div>
+
 
 <section class="section">
 
@@ -211,9 +204,7 @@ transform:translateY(0);
 
 <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93">
 
-<img class="chest-logo" src="logo.png">
-
-<img class="collar-logo" src="logo.png">
+<img class="logo-chest" src="logo.png">
 
 </div>
 
@@ -226,7 +217,8 @@ transform:translateY(0);
 </div>
 
 
-<!-- POLO TSHIRT -->
+
+<!-- POLO -->
 
 <div class="card">
 
@@ -234,13 +226,11 @@ transform:translateY(0);
 
 <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a">
 
-<img class="chest-logo" src="logo.png">
-
-<img class="collar-logo" src="logo.png">
+<img class="logo-chest" src="logo.png">
 
 </div>
 
-<h3>C&C Polo T-Shirt</h3>
+<h3>C&C White Polo T-Shirt</h3>
 
 <p class="price">₹14,999</p>
 
@@ -248,9 +238,11 @@ transform:translateY(0);
 
 </div>
 
+
 </div>
 
 </section>
+
 
 <footer>
 
@@ -268,6 +260,7 @@ window.open("https://wa.me/919813070099?text=Hello I want to order C&C white clo
 }
 
 </script>
+
 
 </body>
 
