@@ -33,10 +33,38 @@ header img{
 height:120px;
 }
 
-/* HERO */
+/* HERO VIDEO */
 
-.hero img{
+.hero{
+position:relative;
 width:100%;
+height:90vh;
+overflow:hidden;
+}
+
+.hero video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:60px;
+letter-spacing:6px;
+}
+
+.hero-text p{
+margin-top:10px;
+font-size:18px;
 }
 
 /* SECTION */
@@ -121,14 +149,25 @@ margin-top:80px;
 </header>
 
 
-<!-- HERO -->
+<!-- HERO VIDEO -->
 
 <div class="hero">
 
-<img src="Pure_white__True_luxury__version_1.png">
+<video autoplay muted loop>
+
+<source src="shirtmaking.mp4" type="video/mp4">
+
+</video>
+
+<div class="hero-text">
+
+<h1>CLASS CLASSIC</h1>
+
+<p>PURE WHITE TRUE LUXURY</p>
 
 </div>
 
+</div>
 
 
 <!-- STORY -->
