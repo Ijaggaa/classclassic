@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>C&C Class Classic</title>
 
 <style>
@@ -11,21 +13,18 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial;
 }
 
 body{
-background:#fff;
+background:white;
 color:#111;
-line-height:1.6;
 }
 
 /* HEADER */
 
 header{
-display:flex;
-justify-content:center;
-align-items:center;
+text-align:center;
 padding:30px;
 border-bottom:1px solid #eee;
 }
@@ -36,34 +35,19 @@ height:120px;
 
 /* HERO */
 
-.hero{
-height:80vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
+.hero img{
+width:100%;
 }
 
-.hero h1{
-font-size:60px;
-letter-spacing:6px;
-}
-
-.hero p{
-margin-top:15px;
-color:#777;
-}
-
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:80px 10%;
 }
 
-.section-title{
+.title{
 text-align:center;
-font-size:34px;
+font-size:36px;
 margin-bottom:60px;
 }
 
@@ -77,40 +61,25 @@ flex-wrap:wrap;
 }
 
 .product{
-width:380px;
+width:420px;
 text-align:center;
-transition:0.4s;
 }
 
-.product:hover{
-transform:translateY(-10px);
-}
-
-/* IMAGE PLACEHOLDER */
-
-.placeholder{
+.product img{
 width:100%;
-height:420px;
-background:#f2f2f2;
-display:flex;
-align-items:center;
-justify-content:center;
-color:#aaa;
-font-size:18px;
 border-radius:8px;
 }
 
 .price{
 margin-top:10px;
-font-size:14px;
 color:#777;
 }
 
 button{
 margin-top:20px;
-padding:12px 28px;
+padding:12px 26px;
 background:#111;
-color:#fff;
+color:white;
 border:none;
 cursor:pointer;
 }
@@ -119,13 +88,14 @@ button:hover{
 background:#333;
 }
 
-/* BRAND STORY */
+/* STORY */
 
 .story{
 max-width:800px;
 margin:auto;
 text-align:center;
 color:#555;
+line-height:1.7;
 }
 
 /* FOOTER */
@@ -135,7 +105,7 @@ background:#111;
 color:white;
 text-align:center;
 padding:40px;
-margin-top:60px;
+margin-top:80px;
 }
 
 </style>
@@ -145,71 +115,107 @@ margin-top:60px;
 <body>
 
 <header>
+
 <img src="logo.png">
+
 </header>
+
+
+<!-- HERO -->
 
 <div class="hero">
 
-<h1>CLASS CLASSIC</h1>
-<p>PURE WHITE TRUE LUXURY</p>
+<img src="Pure_white__True_luxury__version_1.png">
 
 </div>
 
 
+
+<!-- STORY -->
+
 <section>
 
-<h2 class="section-title">Our Philosophy</h2>
+<h2 class="title">Pure White Philosophy</h2>
 
 <p class="story">
-C&C – Class Classic is a luxury clothing brand dedicated to
-one timeless color: white.
-We believe simplicity defines true elegance.
-Every shirt is crafted from premium cotton,
-designed with precision tailoring and finished
-with our signature C&C craftsmanship.
+
+C&C – Class Classic is dedicated to the most timeless color in fashion — white.
+
+From the finest cotton fields to precise tailoring,
+every piece is crafted with attention to detail,
+minimalism and true luxury.
+
+PURE WHITE TRUE LUXURY.
+
 </p>
 
 </section>
 
 
+
+<!-- PRODUCTS -->
+
 <section>
 
-<h2 class="section-title">Luxury White Collection</h2>
+<h2 class="title">Luxury White Collection</h2>
 
 <div class="products">
 
 <div class="product">
 
-<div class="placeholder">
-Add Shirt Image
-</div>
+<img src="Sample_Product_Assets (1).png">
 
 <h3>C&C White Shirt</h3>
 
 <p class="price">₹21,999</p>
 
-<button onclick="order()">Buy Now</button>
+<button onclick="order()">Order on WhatsApp</button>
 
 </div>
 
 
 <div class="product">
 
-<div class="placeholder">
-Add Polo Image
-</div>
+<img src="Sample_Product_Assets (2).png">
 
 <h3>C&C White Polo</h3>
 
 <p class="price">₹14,999</p>
 
-<button onclick="order()">Buy Now</button>
+<button onclick="order()">Order on WhatsApp</button>
 
 </div>
 
 </div>
 
 </section>
+
+
+
+<!-- CRAFTSMANSHIP -->
+
+<section>
+
+<h2 class="title">Craftsmanship</h2>
+
+<div class="products">
+
+<div class="product">
+
+<img src="Clarity_Amidst_the_Noise_version_1.png">
+
+</div>
+
+<div class="product">
+
+<img src="Mastery_in_every_single_stitch_version_1.png">
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <footer>
@@ -219,15 +225,17 @@ Add Polo Image
 </footer>
 
 
+
 <script>
 
 function order(){
 
-window.open("https://wa.me/919813070099?text=I want to order C&C White Clothing");
+window.open("https://wa.me/919813070099?text=I want to order C&C White Collection");
 
 }
 
 </script>
+
 
 </body>
 </html>
