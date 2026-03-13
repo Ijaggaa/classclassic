@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>C&C Class Classic</title>
+<title>C&C Luxury</title>
 
 <style>
 
@@ -13,128 +13,160 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Helvetica,Arial,sans-serif;
 }
 
 body{
-background:#ffffff;
-color:#111;
+background:#000;
+color:#fff;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+nav{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
-justify-content:center;
+justify-content:space-between;
 align-items:center;
-padding:30px;
-border-bottom:1px solid #eee;
+padding:20px 50px;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:100;
 }
 
-header img{
-height:120px;
+nav img{
+height:45px;
 }
 
-/* HERO VIDEO */
+nav a{
+color:white;
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+letter-spacing:2px;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.6;
+}
+
+/* HERO */
 
 .hero{
+height:100vh;
 position:relative;
-height:90vh;
 overflow:hidden;
 }
 
 .hero video{
+position:absolute;
+top:0;
+left:0;
 width:100%;
 height:100%;
 object-fit:cover;
 }
 
-.hero-text{
+.overlay{
 position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-color:white;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
 text-align:center;
 }
 
-.hero-text h1{
-font-size:60px;
-letter-spacing:8px;
+.overlay h1{
+font-size:70px;
+letter-spacing:10px;
+margin-bottom:20px;
 }
 
-.hero-text p{
-margin-top:10px;
-font-size:18px;
-}
-
-/* SECTION */
-
-section{
-padding:80px 10%;
-}
-
-.title{
-text-align:center;
-font-size:36px;
-margin-bottom:60px;
+.overlay p{
+letter-spacing:4px;
+opacity:0.8;
 }
 
 /* PRODUCTS */
 
 .products{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-}
-
-.product{
-width:420px;
+padding:120px 60px;
 text-align:center;
+background:#000;
 }
 
-.product img{
-width:100%;
-border-radius:8px;
+.products h2{
+font-size:28px;
+letter-spacing:6px;
+margin-bottom:60px;
 }
 
-.price{
-color:#777;
-margin-top:10px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
 }
 
-button{
-margin-top:20px;
-padding:12px 28px;
+.card{
 background:#111;
-color:white;
+padding:20px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+.card img{
+width:100%;
+}
+
+.card button{
+margin-top:15px;
+padding:12px 30px;
 border:none;
+background:white;
+color:black;
 cursor:pointer;
+font-weight:bold;
+letter-spacing:2px;
 }
 
-button:hover{
-background:#333;
-}
+/* BANNER TEXT */
 
-/* STORY */
-
-.story{
-max-width:800px;
-margin:auto;
+.banner{
+padding:120px 20px;
 text-align:center;
-color:#555;
-line-height:1.7;
+background:#050505;
+}
+
+.banner h2{
+font-size:36px;
+letter-spacing:6px;
+}
+
+.banner p{
+margin-top:20px;
+letter-spacing:2px;
+opacity:0.7;
 }
 
 /* FOOTER */
 
 footer{
-background:#111;
-color:white;
-text-align:center;
 padding:40px;
-margin-top:60px;
+text-align:center;
+background:#000;
+letter-spacing:3px;
+font-size:14px;
 }
 
 </style>
@@ -143,135 +175,87 @@ margin-top:60px;
 
 <body>
 
-<!-- LOGO -->
+<!-- NAVBAR -->
 
-<header>
+<nav>
 
-<img src="logo.png%20.png">
+<img src="logo.png.png">
 
-</header>
+<div>
+<a href="#">HOME</a>
+<a href="#">COLLECTION</a>
+<a href="#">ABOUT</a>
+</div>
 
+</nav>
 
 <!-- HERO VIDEO -->
 
-<div class="hero">
+<section class="hero">
 
 <video autoplay muted loop>
-
-<source src="shirtmaking.mp4" type="video/mp4">
-
+<source src="Luxury_White_Shirt_Commercial_Production.mp4" type="video/mp4">
 </video>
 
-<div class="hero-text">
+<div class="overlay">
 
-<h1>CLASS CLASSIC</h1>
-
-<p>PURE WHITE TRUE LUXURY</p>
-
-</div>
+<h1>C&C</h1>
+<p>PURE WHITE — TRUE LUXURY</p>
 
 </div>
-
-
-<!-- BRAND STORY -->
-
-<section>
-
-<h2 class="title">Pure White Philosophy</h2>
-
-<p class="story">
-
-C&C – Class Classic celebrates the power of simplicity.
-
-From the finest cotton farms to precision tailoring,
-every piece reflects minimal elegance and timeless luxury.
-
-PURE WHITE TRUE LUXURY.
-
-</p>
 
 </section>
-
 
 <!-- PRODUCTS -->
 
-<section>
+<section class="products">
 
-<h2 class="title">Luxury White Collection</h2>
+<h2>WHITE COLLECTION</h2>
 
-<div class="products">
+<div class="grid">
 
-<div class="product">
-
+<div class="card">
 <img src="Sample_Product_Assets (1).png">
-
-<h3>C&C White Shirt</h3>
-
-<p class="price">₹21,999</p>
-
-<button onclick="order()">Order on WhatsApp</button>
-
+<button>BUY NOW</button>
 </div>
 
-
-<div class="product">
-
+<div class="card">
 <img src="Sample_Product_Assets (2).png">
+<button>BUY NOW</button>
+</div>
 
-<h3>C&C White Polo</h3>
+<div class="card">
+<img src="Sample_Product_Assets (3).png">
+<button>BUY NOW</button>
+</div>
 
-<p class="price">₹14,999</p>
-
-<button onclick="order()">Order on WhatsApp</button>
-
+<div class="card">
+<img src="Sample_Product_Assets (4).png">
+<button>BUY NOW</button>
 </div>
 
 </div>
 
 </section>
 
+<!-- BRAND MESSAGE -->
 
-<!-- CRAFTSMANSHIP -->
+<section class="banner">
 
-<section>
+<h2>CLARITY AMIDST THE NOISE</h2>
 
-<h2 class="title">Craftsmanship</h2>
-
-<div class="products">
-
-<div class="product">
-
-<img src="Clarity_Amidst_the_Noise_version_1.png">
-
-</div>
-
-<div class="product">
-
-<img src="Mastery_in_every_single_stitch_version_1.png">
-
-</div>
-
-</div>
+<p>Minimal Design. Maximum Presence.</p>
 
 </section>
 
+<!-- FOOTER -->
 
 <footer>
 
-<p>© 2026 C&C Class Classic</p>
+C&C — PURE WHITE. TRUE LUXURY.
 
 </footer>
 
-
-<script>
-
-function order(){
-
-window.open("https://wa.me/919813070099?text=I want to order C&C White Collection");
-
-}
-
-</script>
-
 </body>
+
 </html>
